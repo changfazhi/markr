@@ -4,7 +4,7 @@
 
 ## System Overview
 
-Math Trainer is a full-stack web application for Singapore H2 A-Level math practice. Students answer questions across 24 topics, receive AI-generated hints, submit handwritten solutions via photo, and track progress through streaks and analytics. The system is split into a React 19 frontend (Vite) and Express TypeScript backend (Supabase + Gemini integration).
+Markr is a full-stack web application for Singapore H2 A-Level math practice. Students answer questions across 24 topics, receive AI-generated hints, submit handwritten solutions via photo, and track progress through streaks and analytics. The system is split into a React 19 frontend (Vite) and Express TypeScript backend (Supabase + Gemini integration).
 
 ```text
 ┌──────────────────────────────────────────────────────────────────┐

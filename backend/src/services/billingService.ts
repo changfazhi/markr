@@ -455,8 +455,8 @@ export async function handleWebhookEvent(rawBody: Buffer, signature: string): Pr
         sendFirstPurchaseEmailIfNeeded(userId, email).catch(() => {});
         if (session.amount_total != null && session.currency) {
           const description = session.mode === 'subscription'
-            ? 'ProjectMath Premium — card subscription'
-            : `ProjectMath Premium — PayNow (${session.metadata?.paynow_plan ?? 'plan'})`;
+            ? 'Markr Premium — card subscription'
+            : `Markr Premium — PayNow (${session.metadata?.paynow_plan ?? 'plan'})`;
           sendReceiptEmail(email, {
             reference: session.id,
             date: new Date(event.created * 1000),
@@ -484,7 +484,7 @@ export async function handleWebhookEvent(rawBody: Buffer, signature: string): Pr
       await sendReceiptEmail(user.email, {
         reference: invoice.id,
         date: new Date(event.created * 1000),
-        description: 'ProjectMath Premium — subscription renewal',
+        description: 'Markr Premium — subscription renewal',
         amountCents: invoice.amount_paid,
         currency: invoice.currency,
       });

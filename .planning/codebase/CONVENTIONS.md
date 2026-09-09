@@ -111,7 +111,7 @@ try {
 **Framework:** console methods only (no centralized logging library)
 
 **Patterns:**
-- `console.log()` for startup messages (e.g., "Math Trainer backend running on http://localhost:PORT")
+- `console.log()` for startup messages (e.g., "Markr backend running on http://localhost:PORT")
 - `console.error()` not explicitly used (errors either logged via Express or silently caught)
 - Errors in async chains often use `.catch(() => {})` to suppress noise (e.g., in `auth.ts` and `billingService.ts`)
 

@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
 // Marketing landing page, ported faithfully from the Claude Design artifact
-// "ProjectMath Landing.dc.html". The design is bespoke, fully inline-styled
+// "ProjectMath Landing.dc.html" (kept under its pre-rebrand name — that is the
+// artifact's actual filename). The design is bespoke, fully inline-styled
 // marketing HTML (unrelated to the app's component system), so it's rendered
 // verbatim. The two dynamic bits from the .dc logic are reproduced without JS:
 //   - accent theme  -> the default "Indigo" palette is set as CSS vars on the root
@@ -129,7 +130,7 @@ const MARKUP = `
     <nav class="pm-nav" style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:32px">
       <a href="#top" style="display:flex;align-items:center;gap:11px">
         <div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;font-family:'Bricolage Grotesque',sans-serif">&#960;</div>
-        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.01em">Project<span style="color:var(--accent)">Math</span></span>
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:21px;letter-spacing:-.01em">Mark<span style="color:var(--accent)">r</span></span>
       </a>
       <!-- Shown only below the nav breakpoint; toggles #pm-menu above via its label. Sits here
            rather than at the end of the row so that when the groups below wrap to their own
@@ -305,7 +306,7 @@ const MARKUP = `
       <div>
         <div style="color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Spaced repetition</div>
         <h2 class="pm-h2" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:42px;line-height:1.1;letter-spacing:-.02em;margin:14px 0 0">Remember the gotchas,<br>not just the topic.</h2>
-        <p class="pm-lead" style="font-size:18px;line-height:1.6;color:#52567a;max-width:520px;margin:18px 0 0">Getting a question right once isn't the same as remembering it in November. ProjectMath runs a proven <b>SM-2</b> spaced-repetition schedule: every question you slip on comes back at <b>expanding intervals</b>, just before you'd forget it, until the trick and the concept behind it are locked in.</p>
+        <p class="pm-lead" style="font-size:18px;line-height:1.6;color:#52567a;max-width:520px;margin:18px 0 0">Getting a question right once isn't the same as remembering it in November. Markr runs a proven <b>SM-2</b> spaced-repetition schedule: every question you slip on comes back at <b>expanding intervals</b>, just before you'd forget it, until the trick and the concept behind it are locked in.</p>
         <ul style="list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:13px">
           <li style="display:flex;gap:11px;font-size:15.5px;color:#2c3050"><span style="color:#10b981;font-weight:800">&#10003;</span>Wrong answers are automatically queued for review</li>
           <li style="display:flex;gap:11px;font-size:15.5px;color:#2c3050"><span style="color:#10b981;font-weight:800">&#10003;</span>Each correct recall pushes the next review further out</li>
@@ -344,7 +345,7 @@ const MARKUP = `
     <div class="pm-sec-featurehead" style="max-width:1180px;margin:0 auto;padding:88px 24px 30px;text-align:center">
       <div style="color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase">AI tools</div>
       <h2 class="pm-h2" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:44px;line-height:1.08;letter-spacing:-.02em;margin:14px 0 0">Two tools that mark like a tutor</h2>
-      <p class="pm-lead" style="font-size:18px;line-height:1.55;color:#52567a;max-width:600px;margin:16px auto 0">Method marks, presentation marks, the lot. ProjectMath checks your maths the way a real examiner would.</p>
+      <p class="pm-lead" style="font-size:18px;line-height:1.55;color:#52567a;max-width:600px;margin:16px auto 0">Method marks, presentation marks, the lot. Markr checks your maths the way a real examiner would.</p>
     </div>
 
     <!-- AI Scan -->
@@ -414,11 +415,11 @@ const MARKUP = `
     </div>
   </section>
 
-  <!-- WHY PROJECTMATH -->
+  <!-- WHY MARKR -->
   <section style="background:#f6f7fc;border-top:1px solid #eef0f7;border-bottom:1px solid #eef0f7">
     <div class="pm-sec" style="max-width:1180px;margin:0 auto;padding:80px 24px">
       <div style="text-align:center;max-width:560px;margin:0 auto">
-        <div style="color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Why ProjectMath</div>
+        <div style="color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase">Why Markr</div>
         <h2 class="pm-h2" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:42px;line-height:1.1;letter-spacing:-.02em;margin:14px 0 0">Quality over quantity</h2>
       </div>
       <div class="pm-why-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px">
@@ -510,7 +511,7 @@ const MARKUP = `
       <div>
         <div style="display:flex;align-items:center;gap:11px">
           <div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;font-family:'Bricolage Grotesque',sans-serif">&#960;</div>
-          <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px;color:#fff">Project<span style="color:var(--accent)">Math</span></span>
+          <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px;color:#fff">Mark<span style="color:var(--accent)">r</span></span>
         </div>
         <p style="font-size:14px;line-height:1.6;margin:16px 0 0;max-width:280px">The guided roadmap and AI tutor for Singapore A-Level H2 Mathematics (9758).</p>
       </div>
@@ -536,7 +537,7 @@ const MARKUP = `
       <p style="font-size:12.5px;line-height:1.7;color:#6a6f99;margin:0">This website was created to help other students, and is provided as a tool without any malicious intent. While the creator has built this website and secured it to the best of their ability, they cannot guarantee that it will be available indefinitely, and they are not responsible for any server failures or malicious intent by others. Furthermore, the solutions and features are created to the best of the creator's ability. The creator reserves the right to modify this disclaimer at any time, and any changes will be effective immediately upon posting. Your continued use of this website after any changes to the disclaimer constitutes acceptance of those changes. If you do not agree to these terms, please do not use this website.</p>
     </div>
     <div style="max-width:1180px;margin:24px auto 0;padding-top:22px;border-top:1px solid #1c2140;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:#6a6f99">
-      <span>&copy; 2026 ProjectMath. All rights reserved.</span>
+      <span>&copy; 2026 Markr. All rights reserved.</span>
       <span>Made for Singapore JC students &#127480;&#127468;</span>
     </div>
   </footer>
@@ -555,7 +556,7 @@ export function LandingPage() {
 
   // Redirect into the app only on the login *transition* (logged-out → logged-in), e.g. right after
   // signing in via the modal here, or landing on `/` directly while already authenticated. We must
-  // NOT redirect when an already-signed-in user navigates here on purpose (clicking the ProjectMath
+  // NOT redirect when an already-signed-in user navigates here on purpose (clicking the Markr
   // logo from the app) — in that case the component mounts with `user` already set, so there's no
   // transition and they can view the landing page. (replace: Back won't bounce between / and /roadmap.)
   const prevUserRef = useRef(user)

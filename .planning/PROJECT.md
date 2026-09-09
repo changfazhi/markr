@@ -1,8 +1,8 @@
-# Math Trainer
+# Markr
 
 ## What This Is
 
-Math Trainer is a LeetCode-style H2 A-Level Math practice platform for Singapore students. v1.0 added a persistent, collapsible study plan sidebar that stays accessible from every page in the app. This milestone (v1.1) adds a working payment entry point on the public landing page, since Stripe billing already exists but is only reachable from inside the logged-in app.
+Markr is a LeetCode-style H2 A-Level Math practice platform for Singapore students. v1.0 added a persistent, collapsible study plan sidebar that stays accessible from every page in the app. This milestone (v1.1) adds a working payment entry point on the public landing page, since Stripe billing already exists but is only reachable from inside the logged-in app.
 
 ## Core Value
 

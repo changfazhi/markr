@@ -16,7 +16,7 @@ Toggle from "Test" to "Live" in the top-left of the Stripe Dashboard. Products, 
 ### Step 2 — Recreate products and prices in live mode
 
 Test-mode price IDs are invalid in live mode. In live mode Dashboard:
-- Create product "ProjectMath Premium" (SGD)
+- Create product "Markr Premium" (SGD)
 - Create all four prices:
   - Card Monthly: S$5.00/month recurring
   - Card Semesterly: S$25.00 every 6 months recurring — under "Billing period" choose **Custom**, set interval **Monthly** with a count of **6** (Stripe has no native "semi-annual" interval, so this is expressed as `interval=month, interval_count=6`)
@@ -77,7 +77,7 @@ Stripe provides live-mode test cards (real card network, no actual charge) for a
 ### Steps to turn it back on
 
 1. **Stripe — enable the payment method:** register/verify the Singapore business, then Dashboard (live mode) → **Settings → Payment methods** → enable **PayNow**. Stripe may request business documents before approval.
-2. **Stripe — create the two live PayNow prices** under the "ProjectMath Premium" product (PayNow is a *one-time* payment, not recurring):
+2. **Stripe — create the two live PayNow prices** under the "Markr Premium" product (PayNow is a *one-time* payment, not recurring):
    - PayNow Monthly: **S$5.00 one-time**
    - PayNow Semesterly: **S$25.00 one-time**
    Copy the two `price_live_...` IDs.
@@ -97,7 +97,7 @@ Stripe provides live-mode test cards (real card network, no actual charge) for a
 
 ### Step 1 — Create the new prices in the Test Mode Dashboard
 
-Dashboard (ensure the "Test mode" toggle, top-right, is on) → Product catalog → "ProjectMath Premium" (or create it if missing, currency SGD):
+Dashboard (ensure the "Test mode" toggle, top-right, is on) → Product catalog → "Markr Premium" (or create it if missing, currency SGD):
 - Card Monthly: S$5.00/month recurring
 - Card Semesterly: S$25.00 every 6 months recurring — under "Billing period" choose **Custom**, interval **Monthly**, count **6** (Stripe has no native "semi-annual" interval)
 - PayNow Monthly: S$5.00 one-time
@@ -179,7 +179,7 @@ Copy the printed `whsec_...` into `backend/.env` as `STRIPE_WEBHOOK_SECRET`. Eac
 
 ## Cloud Run: Map a Custom Domain
 
-**When:** You want the app served from a real domain (e.g. `app.projectmath.com`) instead of the auto-generated `math-trainer-xxxxx.a.run.app` URL. Do this **before** the Stripe live-mode webhook and before inviting real users, because the Stripe webhook URL, `FRONTEND_URL`/`CORS_ORIGIN`, and Firebase authorized domains all need to point at the final domain.
+**When:** You want the app served from a real domain (e.g. `app.markr.com`) instead of the auto-generated `math-trainer-xxxxx.a.run.app` URL. Do this **before** the Stripe live-mode webhook and before inviting real users, because the Stripe webhook URL, `FRONTEND_URL`/`CORS_ORIGIN`, and Firebase authorized domains all need to point at the final domain.
 
 **Prerequisite:** A deployed, working Cloud Run service (see `.planning/DEPLOYMENT.md`) and access to your domain registrar's DNS. This is unrelated to the Resend email-sending domain — that one only signs outbound mail and can be a completely different domain; this one is where the browser loads the app.
 
@@ -288,7 +288,7 @@ Dashboard → Domains → Add Domain. Resend gives you a handful of DNS records 
 Once the domain shows "Verified":
 
 ```
-EMAIL_FROM="ProjectMath <noreply@yourdomain.com>"
+EMAIL_FROM="Markr <noreply@yourdomain.com>"
 ```
 
 The local part (`noreply`) can be anything; the domain must match the one just verified.

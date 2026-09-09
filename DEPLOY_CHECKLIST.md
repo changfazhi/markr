@@ -1,4 +1,4 @@
-# Deploy & Smoke Test Checklist — Math Trainer on Cloud Run
+# Deploy & Smoke Test Checklist — Markr on Cloud Run
 
 Everything you need to run, in order, when you're ready to go live. Nothing in this file
 has been run yet — the app is **not deployed**. Background/decisions: `.planning/DEPLOYMENT.md`.
