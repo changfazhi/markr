@@ -45,7 +45,7 @@ export async function sendFeedbackEmail(user: FeedbackUser, input: FeedbackInput
     to,
     // Replying to the feedback email goes straight to the student.
     replyTo: user.email ?? undefined,
-    subject: `[ProjectMath feedback] ${category} — ${user.email ?? 'unknown email'}`,
+    subject: `[Markr feedback] ${category} — ${user.email ?? 'unknown email'}`,
     text: body,
   });
 }

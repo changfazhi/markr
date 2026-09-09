@@ -1,4 +1,4 @@
-# Walking Skeleton — Math Trainer Persistent Study Plan Sidebar
+# Walking Skeleton — Markr Persistent Study Plan Sidebar
 
 **Phase:** 1
 **Generated:** 2026-06-27

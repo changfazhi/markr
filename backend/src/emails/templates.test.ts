@@ -43,13 +43,13 @@ describe('receiptEmail', () => {
     const { html, text } = receiptEmail({
       reference: 'cs_test_123',
       date: new Date('2026-07-08T00:00:00Z'),
-      description: 'ProjectMath Premium — PayNow (monthly)',
+      description: 'Markr Premium — PayNow (monthly)',
       amountCents: 1999,
       currency: 'sgd',
     });
     expect(html).toContain('cs_test_123');
     expect(html).toMatch(/\$19\.99|SGD.*19\.99/);
     expect(text).toContain('cs_test_123');
-    expect(text).toContain('ProjectMath Premium — PayNow (monthly)');
+    expect(text).toContain('Markr Premium — PayNow (monthly)');
   });
 });

@@ -97,7 +97,7 @@ export function HomePage() {
           style={{ fontFamily: BRICOLAGE }}
         >
           <Link to="/" className="hover:text-[#c7cbff] transition-colors">
-            Project<span className="text-[#7c83ff]">Math</span>
+            Mark<span className="text-[#7c83ff]">r</span>
           </Link>
         </h1>
         <p className="hidden sm:block mt-3 text-[#aab0d6] max-w-2xl">

@@ -1,4 +1,4 @@
-# Roadmap: Math Trainer — Landing Page Payment Entry Point (v1.1)
+# Roadmap: Markr — Landing Page Payment Entry Point (v1.1)
 
 ## Overview
 

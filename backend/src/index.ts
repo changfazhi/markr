@@ -109,5 +109,5 @@ initRealtime(httpServer);
 startPayNowExpiryReminderCron();
 
 httpServer.listen(PORT, () => {
-  console.log(`Math Trainer backend running on http://localhost:${PORT}`);
+  console.log(`Markr backend running on http://localhost:${PORT}`);
 });

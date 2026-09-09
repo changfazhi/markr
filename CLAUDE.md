@@ -1,6 +1,25 @@
-# Math Trainer — Project Guide
+# Markr — Project Guide
 
 LeetCode-style math practice for Singapore H2 A-Level students. Express + TypeScript backend, React 19 + Vite + Tailwind + KaTeX frontend.
+
+## Naming
+
+The product is **Markr** (renamed from "ProjectMath" / "Math Trainer"). Every
+user-facing string, package name, doc and comment uses Markr. Five identifiers
+deliberately keep their old names because they are external or stateful, and
+changing them breaks something — do not "finish" the rename on these:
+
+| Old name kept | Where | Why |
+|---|---|---|
+| `projectmath-5c926` | `frontend/.env.production` (Firebase project ID + auth domain) | Firebase project IDs are immutable; a new value breaks sign-in for every user |
+| `projectmath-app` | GCP project | Project IDs are immutable |
+| `math-trainer` | `cloudbuild.yaml`, `scripts/deploy.sh`, `Dockerfile`, deploy docs | Cloud Run service name — renaming spins up a *new* service on a new URL, orphaning the Stripe webhook, `FRONTEND_URL`/`CORS_ORIGIN` and the Firebase authorized domains |
+| `projectmath9999@gmail.com` | landing-page footer, `.env.example`, `feedbackService.ts` fallback | A real mailbox. Override with `FEEDBACK_TO_EMAIL` rather than editing code |
+| `math_trainer_visited_topics` | `frontend/src/hooks/useVisitedTopics.ts` | localStorage key already holding live user state; renaming reads back empty and un-marks every visited topic |
+
+The Stripe product is still named "Markr Premium" in code (`billingService.ts`,
+email templates) — rename the product in the Stripe Dashboard to match; the
+price IDs are what the code actually keys on, so that is display-only.
 
 ## Running
 

@@ -1,4 +1,4 @@
-# Requirements: Math Trainer — Persistent Study Plan Sidebar
+# Requirements: Markr — Persistent Study Plan Sidebar
 
 **Defined:** 2026-06-27
 **Core Value:** Students can see and act on their daily study plan from anywhere in the app without losing their place.
@@ -81,7 +81,7 @@
 
 ---
 
-# Requirements: Math Trainer — Landing Page Payment Entry Point (v1.1)
+# Requirements: Markr — Landing Page Payment Entry Point (v1.1)
 
 **Defined:** 2026-07-04
 **Core Value:** Visitors can start a Premium upgrade directly from the landing page's pricing pitch, without first having to find their way into the app.

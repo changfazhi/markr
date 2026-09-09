@@ -8,7 +8,7 @@ import {
   type ReceiptInput,
 } from '../emails/templates.js';
 
-const EMAIL_FROM = process.env.EMAIL_FROM ?? 'ProjectMath <noreply@yourdomain.com>';
+const EMAIL_FROM = process.env.EMAIL_FROM ?? 'Markr <noreply@yourdomain.com>';
 
 // Every sender here swallows its own errors and returns false instead of throwing —
 // a failed transactional email must never break auth/checkout. Callers should only

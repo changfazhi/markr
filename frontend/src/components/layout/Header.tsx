@@ -46,7 +46,7 @@ export function Header() {
             className="hidden sm:inline text-lg font-extrabold tracking-tight text-white"
             style={{ fontFamily: BRICOLAGE }}
           >
-            Project<span style={{ color: '#7c83ff' }}>Math</span>
+            Mark<span style={{ color: '#7c83ff' }}>r</span>
           </span>
         </Link>
 

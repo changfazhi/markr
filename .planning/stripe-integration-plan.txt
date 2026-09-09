@@ -1,4 +1,4 @@
-STRIPE INTEGRATION PLAN — ProjectMath
+STRIPE INTEGRATION PLAN — Markr
 ======================================
 Branch: stripe-API-and-payment
 Date: 2026-07-03
@@ -13,7 +13,7 @@ Tier propagated via Firebase custom claims (existing mechanism).
 
 STEP 1 — Create Stripe Product + Prices (MCP)
 ----------------------------------------------
-- Product: "ProjectMath Premium"
+- Product: "Markr Premium"
 - Price A: $15.00 / month recurring
 - Price B: $144.00 / year recurring
 - Save both Price IDs → go into .env as STRIPE_PRICE_MONTHLY and STRIPE_PRICE_ANNUAL

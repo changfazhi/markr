@@ -1,5 +1,8 @@
 import { useCallback, useState } from 'react'
 
+// Deliberately keeps its pre-rebrand name: this key already holds every existing
+// user's visited-topics set, and renaming it would read back empty once, silently
+// un-marking every topic they've opened. It is never shown to the user.
 const KEY = 'math_trainer_visited_topics'
 
 function loadVisited(): Set<string> {

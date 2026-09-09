@@ -52,7 +52,7 @@ Local dev can get away with Resend's shared `onboarding@resend.dev` sender (see 
 
 1. Buy a domain if you don't already have one for this project (any registrar — Namecheap/Cloudflare/Porkbun; doesn't need to be the same domain the app is deployed on, a subdomain like `mail.yourdomain.com` works too).
 2. Resend Dashboard → **Domains** → **Add Domain** → add the SPF/DKIM DNS records it gives you at your registrar → wait for "Verified".
-3. Set `EMAIL_FROM="ProjectMath <noreply@yourdomain.com>"` (matching the verified domain) as a Cloud Run env var, replacing the `onboarding@resend.dev` placeholder used locally.
+3. Set `EMAIL_FROM="Markr <noreply@yourdomain.com>"` (matching the verified domain) as a Cloud Run env var, replacing the `onboarding@resend.dev` placeholder used locally.
 4. Fill in real `BUSINESS_NAME`/`SUPPORT_EMAIL` (and `BUSINESS_UEN` if applicable) — these appear on every email and on the receipt.
 
 `NODE_ENV=production` is baked into the image; `PORT` is injected by Cloud Run.

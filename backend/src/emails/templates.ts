@@ -33,34 +33,34 @@ function ctaButton(label: string, href: string): string {
 
 export function welcomeEmail(): EmailContent {
   const bodyHtml = `
-    <p>Welcome aboard! You're all set up on ProjectMath — H2 A-Level math practice with instant AI-graded feedback.</p>
+    <p>Welcome aboard! You're all set up on Markr — H2 A-Level math practice with instant AI-graded feedback.</p>
     <p>A free account gets you 3 AI photo scans and 3 AI hint messages a day. If you want unlimited scans and hints, plus weakness diagnosis and spaced-repetition review, Premium removes those daily caps.</p>
     ${ctaButton('Start practicing', FRONTEND_URL)}
   `;
   const bodyText = [
-    "Welcome aboard! You're all set up on ProjectMath — H2 A-Level math practice with instant AI-graded feedback.",
+    "Welcome aboard! You're all set up on Markr — H2 A-Level math practice with instant AI-graded feedback.",
     'A free account gets you 3 AI photo scans and 3 AI hint messages a day. If you want unlimited scans and hints, plus weakness diagnosis and spaced-repetition review, Premium removes those daily caps.',
     `Start practicing: ${FRONTEND_URL}`,
   ].join('\n\n');
 
-  const { html, text } = shell('Welcome to ProjectMath', bodyHtml, bodyText);
-  return { subject: 'Welcome to ProjectMath', html, text };
+  const { html, text } = shell('Welcome to Markr', bodyHtml, bodyText);
+  return { subject: 'Welcome to Markr', html, text };
 }
 
 export function firstPurchaseEmail(): EmailContent {
   const bodyHtml = `
-    <p>Thanks for subscribing to ProjectMath Premium — your daily AI scan and hint limits are now unlimited.</p>
+    <p>Thanks for subscribing to Markr Premium — your daily AI scan and hint limits are now unlimited.</p>
     <p>A few things worth trying: the AI hint chatbot for a Socratic nudge when you're stuck, "upload via phone" for grading handwritten working, and the review tab for weak-topic diagnosis and spaced-repetition drills.</p>
     ${ctaButton('Explore Premium features', FRONTEND_URL)}
   `;
   const bodyText = [
-    "Thanks for subscribing to ProjectMath Premium — your daily AI scan and hint limits are now unlimited.",
+    "Thanks for subscribing to Markr Premium — your daily AI scan and hint limits are now unlimited.",
     'A few things worth trying: the AI hint chatbot for a Socratic nudge when you\'re stuck, "upload via phone" for grading handwritten working, and the review tab for weak-topic diagnosis and spaced-repetition drills.',
     `Explore Premium features: ${FRONTEND_URL}`,
   ].join('\n\n');
 
-  const { html, text } = shell("You're on ProjectMath Premium", bodyHtml, bodyText);
-  return { subject: "You're on ProjectMath Premium", html, text };
+  const { html, text } = shell("You're on Markr Premium", bodyHtml, bodyText);
+  return { subject: "You're on Markr Premium", html, text };
 }
 
 export function payNowExpiryReminderEmail(daysLeft: number, expiresAt: Date): EmailContent {
@@ -72,12 +72,12 @@ export function payNowExpiryReminderEmail(daysLeft: number, expiresAt: Date): Em
   const title = `Your Premium plan expires in ${daysLeft} ${dayWord}`;
 
   const bodyHtml = `
-    <p>Your ProjectMath Premium access (PayNow plan) expires on <strong>${expiryDate}</strong> — that's ${daysLeft} ${dayWord} from now.</p>
+    <p>Your Markr Premium access (PayNow plan) expires on <strong>${expiryDate}</strong> — that's ${daysLeft} ${dayWord} from now.</p>
     <p>Renew before then to keep unlimited AI scans and hints without a gap in access.</p>
     ${ctaButton('Renew now', FRONTEND_URL)}
   `;
   const bodyText = [
-    `Your ProjectMath Premium access (PayNow plan) expires on ${expiryDate} — that's ${daysLeft} ${dayWord} from now.`,
+    `Your Markr Premium access (PayNow plan) expires on ${expiryDate} — that's ${daysLeft} ${dayWord} from now.`,
     'Renew before then to keep unlimited AI scans and hints without a gap in access.',
     `Renew now: ${FRONTEND_URL}`,
   ].join('\n\n');
@@ -131,5 +131,5 @@ export function receiptEmail(input: ReceiptInput): EmailContent {
   ].join('\n');
 
   const { html, text } = shell('Payment receipt', bodyHtml, bodyText);
-  return { subject: `Your ProjectMath receipt — ${issuedDate}`, html, text };
+  return { subject: `Your Markr receipt — ${issuedDate}`, html, text };
 }

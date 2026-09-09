@@ -1,5 +1,5 @@
 {
-  "name": "projectmath",
+  "name": "markr",
   "private": true,
   "scripts": {
     "setup": "npm install --prefix backend && npm install --prefix frontend",
